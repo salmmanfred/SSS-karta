@@ -25,6 +25,7 @@
         </g>
         <g  class="distrikt" data-namn="UFOS" data-url="https://au.se/UFOS">
             <circle id="UFOS" cx="244" cy="180" r="5" fill="red" />
+            
         </g>
         
         
@@ -41,6 +42,7 @@
     display: none;
     pointer-events: none;">
     </div>
+   
 </div>
 
 <style>
@@ -129,8 +131,8 @@
                 const namn = this.getAttribute("data-namn");
                 if (namn) {
                     tooltip.innerText = namn;
-                    tooltip.style.left = e.pageX - 270 + "px"; // Placera bredvid muspekaren
-                    tooltip.style.top = e.pageY - 270 + "px";
+                    tooltip.style.left = e.offsetX + 10 + "px"; // Placera bredvid muspekaren
+                    tooltip.style.top = e.offsetY + 10 + "px";
                     tooltip.style.display = "block";
                     
                     document.getElementById(namn).r.baseVal.value = 10
